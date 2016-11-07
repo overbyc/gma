@@ -1,0 +1,63 @@
+html {padding:0;margin:0;}
+body {padding:25px 100px 200px 100px;margin:0;}
+
+p {font-family: "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	width: 95%;
+	padding-left:30px;}
+
+h1 {text-align:center;
+	color:#ffffff;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;}
+
+h5 {text-align:center;
+	color:#002D72;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size:24px;
+}
+
+#login_form form {margin: 0 auto;padding-top:200px;width: 250px;}
+
+.name h5{
+	display:inline;
+}
+#app_title{
+	font-size:15px;
+	background-color:#002D72;
+	border-top:3px solid #002D72;
+	border-bottom:10px solid #B1B1B1;
+	border-radius: 25px 25px 0px 0px;
+}
+#login_form{
+	width:200px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:right;
+}
+#reports_form{
+	width:200px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:right;
+}
+#main{
+	margin-top:0px;
+	border:2px solid #DBD8D8;
+	min-height: 500px;
+	border-collapse:collapse;
+	border-color:#002D72;
+	border-top:1px solid #B1B1B1;;
+}
+#main h3{
+	padding: 0px 0px 0px 50px;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	color:#002D72;
+	font-size:22px;
+}
+#main h1{
+	text-align:center;
+}
+th { 
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+tr {font-family: "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+}

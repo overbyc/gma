@@ -1,0 +1,214 @@
+#vcf_upload{
+	display:inline;
+}
+#vcf_upload p, #review h4{
+	display:inline;
+}
+#review{
+	text-align: center;
+}
+#results ul{
+	margin-left:20px;
+}
+#divider{
+	width:100%;
+	border-top:2px solid #999999;
+	border-bottom:2px solid #999999;
+	margin:20px 20px 0px 0px;
+}
+#nav ul{
+	list-style-type:none;
+}
+#nav ul li{
+	display:inline;
+	border:2px solid #666666;
+	padding:2px 5px 2px 5px;
+	margin:0px -6px 0px 0px;
+	border-radius: 10px 10px 0px 0px;
+	background-color: #aaaaaa;
+	color:#333333;
+}
+#results a{
+	text-decoration: none;
+	color:#000000;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+#interpretation textarea{
+	min-height: 125px;
+}
+.selected{
+	border-bottom:none!important;
+	background-color: #ffffff!important;
+}
+#recommendations{
+	min-height: 150px;
+}
+#actions, #evidence, #patient_resource{
+	margin-right:5%;
+	padding:0px 20px 0px 20px;
+}
+
+.div1, .div2,{
+	overflow-x:auto;	
+}
+.div1 table, .div2 table{
+	width:90%;
+	margin-left: 5%;
+	border-collapse: collapse;
+	border: none;
+}
+
+
+textarea{
+	min-width: 90%;
+	min-height: 100px;
+	margin-left:20px;
+	margin-top:10px;
+}
+
+#save_button{
+	float:right;
+	margin-right: 20px;
+	height:20%;
+}
+
+.div1 td,.div1 th,.div2 td,.div2 th{
+	text-align: left;
+	padding:10px;
+	}
+	
+td:nth-child(odd) {
+	border-bottom: 1px solid #f2f2f2;}
+	
+td:nth-child(even) {border: 1px solid #f2f2f2;}
+
+.div1 #variants_div td:nth-child(odd) {
+	background-color: #f2f2f2;}
+	
+tr:nth-child(odd) {background-color: #f2f2f2;}
+
+.div1 th,.div2 th {
+	background-color:#002D72;
+	color:#FFFFFF;
+	font-weight:500;
+	border-bottom: 1px solid #ddd;
+}
+
+#action_items button, #evidence_items button, #reference_items button, #results button{
+	font-size: 14px;
+	float:right;
+	padding: 2px;
+}
+
+#action_items form, #evidence_items form, #reference_items form{
+	margin:0px 0px 0px 30px;
+
+	display:inline;
+}
+#results_info_div{
+	border-top:2px solid #999999;
+	margin:20px 20px 0px 20px;
+}
+#interpretation p, #recommendations p, #test_method p{
+	margin-left:20px;
+	width: 90%;
+	font-family: "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+}
+#yellow{
+	color:#bbbb00;
+}
+#red{
+	color:red;
+}
+#green{
+	color:green;
+}
+
+@import "http://fonts.googleapis.com/css?family=Raleway";
+/*----------------------------------------------
+CSS settings for HTML div Exact Center
+------------------------------------------------*/
+#action_box, #evidence_box, #reference_box, #information_box, #variant_box{
+width:100%;
+height:100%;
+opacity:.95;
+top:0;
+left:0;
+display:none;
+position:fixed;
+background-color:#313131;
+overflow:auto;
+
+}
+#close {
+position:absolute;
+right:-14px;
+top:-14px;
+cursor:pointer
+}
+#action_items, #evidence_items, #reference_items, #information_items, #variant_items{
+position:absolute;
+margin-left:50px;
+top:5%;
+bottom:5%;
+font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+width:80%;
+height: 80%;
+min-width:250px;
+padding:10px 50px;
+border:2px solid gray;
+border-radius:10px;
+background-color:#fff;
+}
+button{
+	-webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  background: #79797a;
+  text-decoration: none;
+  padding: 5px;
+}
+
+#action_items button hover, #evidence_items button hover, #reference_items button hover, #results button hover {
+  background: #002D72;
+  text-decoration: none;
+}
+
+#information{
+	border-radius:50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	width:25px;
+	height:25px;
+	background-color:#3566B1;
+	color:#ffffff;
+	border-color:#E4E4E4;
+}
+#variant{
+    border-radius:50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	width:25px;
+	height:25px;
+	background-color:#3566B1;
+	color:#ffffff;
+	border-color:#E4E4E4;
+}
+#action_items form{
+	display: inline;
+	float:left;
+	padding:0;
+	margin-left:0;
+}
+
+#reference_iframe{
+	height:100%;
+	width:100%;
+	
+}

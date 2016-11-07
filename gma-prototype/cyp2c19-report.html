@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="demo-settings.js"></script>
+        <title>Genomic Medicine Assistant Demo</title>
+        <link rel='stylesheet' href='main.css'></link>
+        <link rel='stylesheet' href='report.css'></link>
+        <link rel='stylesheet' href='inbox.css'></link>
+        <script type="text/javascript" src="jquery-latest.js"></script>
+        <script src="light_box.js"></script>
+        <script>
+			
+				$(document).ready(function(){
+		    		$(".div2").hide();
+		        	document.getElementById("selected_one").className = document.getElementById("selected_one").className + " selected";  // this adds the selected class
+				    $(".link1, .link2").bind("click", function () {
+			    	  $(".div1, .div2").hide();        
+		      		  if ($(this).attr("class") == "link1")
+		      		  {
+		        		$(".div1").show();
+		        		document.getElementById("selected_one").className = document.getElementById("selected_one").className + " selected";  // this adds the selected class
+						document.getElementById("selected_two").className = document.getElementById("selected_two").className.replace(" selected", ""); // this removes the selected class
+		      		  }
+		      		  else 
+		      		  { 
+		        		$(".div2").show();
+						document.getElementById("selected_two").className = document.getElementById("selected_two").className + " selected";  // this adds the selected class
+						document.getElementById("selected_one").className = document.getElementById("selected_one").className.replace(" selected", ""); // this removes the selected class
+		      		  }
+		    		});
+				});
+			</script>
+		</head>
+		<body>
+			<div id="action_box">
+				<!-- Popup Div Starts Here -->
+				<div id="action_items">
+					<button onclick ="action_hide()" id="close">X</button>
+					<h2>Actions:</h2>
+						<form action="">
+							<input type="checkbox" name="action" value="email_patient">Email letter to patient<br>
+							<input type="checkbox" name="action" value="email_patient">Email patient resource to patient<br>
+							<button onclick="div_hide()" id="send">Send</button>
+						</form>
+				</div>
+				<!-- Popup Div Ends Here -->
+			</div>			
+			<div id="evidence_box" >
+				<!-- Popup Evidence Div Starts Here -->
+				<div id="evidence_items" >
+					<button onclick ="evidence_hide()" id="close">X</button>
+                    <iframe id="reference_iframe" src="https://www.pharmgkb.org/guideline/PA166104948" width="100%" height="100%"></iframe>
+				</div>
+				<!-- Popup Evidence Div Ends Here -->
+			</div>			
+			<div id="reference_box">
+				<!-- Popup Patient Resource Div Starts Here -->
+				<div id="reference_items">
+					<button onclick ="reference_hide()" id="close">X</button>
+                    <iframe id="reference_iframe" src="http://myresults.org/results/explore-by-drug/clopidogrel-plavix.html" width="100%" height="100%"></iframe>
+				</div>
+				<!-- Popup Patient Resource Div Ends Here -->
+			</div>			
+			<div id="information_box">
+				<!-- Popup Gene Information Div Starts Here -->
+				<div id="information_items">
+					<button onclick ="information_hide()" id="close">X</button>
+                    <iframe id="reference_iframe" src="https://ghr.nlm.nih.gov/gene/CYP2C19" width="100%" height="100%"></iframe>
+				</div>
+				<!-- Popup Gene Information Div Ends Here -->
+			</div>
+            <div id="variant_box">
+                <!-- Popup Variant Information Div Starts Here -->
+                <div id="variant_items">
+                    <button onclick ="variant_hide()" id="close">X</button>
+                    <iframe id="reference_iframe" src="http://www.ncbi.nlm.nih.gov/clinvar/variation/16897" width="100%" height="100%"></iframe>
+                </div>
+                <!-- Popup Variant Information Div Ends Here -->
+            </div>
+            
+            <p>Cutting E, Banchero M, Beitelshees AL, Cimino JJ, Del Fiol G, Gurses AP, Hoffman MA, Jeng LJ, Kawamoto K, Kelemen M, Pincus HA, Shuldiner AR, Williams MS, Pollin TI, Overby CL. <b>User-centered design of multi-gene sequencing panel reports for clinicians.</b> Journal of Biomedical Informatics. 2016 Jul 14.</p>
+                        
+			<div id='app_title'>
+				<h1>Genomic Medicine Assistant</h1>
+			</div>
+			<div id="main">
+				<h1><span style="color:#002D72;">Pharmacogenomic Sequencing Panel Report</span></h1>
+				<div id="results">
+					<ul>
+						<li id="selected_one"><a href="#" class="link1">Results</a></li>
+						<li id="selected_two"><a href="#" class="link2">Test Information</a></li>
+					</ul>
+					<div class="div1" >
+                    
+ <!-- RESULTS TABLE -->
+                        <table>
+                            <tr>
+                                <th>Patient</th>
+                                <td>Mouse, Mickey</td>
+                                <th>Specimen Type:</th>
+                                <td>Whole Blood</td>
+                            </tr>
+                            <tr>
+                                <th>Patient DOB</th>
+                                <td>06/15/1945</td>
+                                <th>Collection Date:</th>
+                                <td>04/22/2015</td>
+                            </tr>
+                       
+                            <tr>
+                                <th>Ordering Provider</th>
+                                <td>Dr. Seuss</td>
+                                <th>Received Date:</th>
+                                <td>04/22/2015</td>
+                            </tr>
+                            <tr>
+                                <th>Institution:</th>
+                                <td>Disney Medical Center</td>
+                                <th>Lab Accession No.</th>
+                                <td>600254</td>
+                            </tr>
+                        </table>
+						<div id="results_info_div">
+                        
+ <!-- RESULTS INFO -->
+ 
+							<p><b><span style="color:#002D72; font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans 		Condensed', Helvetica, Arial, sans-serif;">
+                            Indication: </span></b> 
+                            50-year-old man with an acute myocardial infarction status post drug-eluting stent.</p>
+                            <p>This individual has results from a multi-gene sequencing panel that is being used to optimize drug therapy.</p>
+
+						</div>
+						<div id="variants_div" style="overflow-x:auto;">
+                        
+<!-- VARIANTS TABLE -->
+                        
+							<h3>Variants</h3>
+							<table>
+								<tr>
+									<th>Gene</th>
+									<th>Variant</th>
+									<th>Clinical Significance</th>
+								</tr>
+								<tr>
+									<td><i>CYP2C19</i>
+									<button id="information" onclick="information_show()">i</button>
+                                 
+									</td>
+                                    <td>c.681G>A (rs4244285); homozygous (*2/*2)
+                                    <button id="variant" onclick="variant_show()">i</button>
+                                    </td>
+									<td>POOR METABOLIZER<br>May be unable to effectively metabolize drug</td>
+								</tr>
+							</table>
+						</div>
+						<div id="interpretation">
+							<button id="evidence" onclick="evidence_show()">Evidence</button>
+                            
+<!-- COMMON VARIANTS -->
+                            
+                            <p><b><span style="color:#002D72; font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans 		Condensed', Helvetica, Arial, sans-serif;">Common <i>CYP2C19</i> Variants</p></b>
+                            <table>
+                                <tr>
+                                    <th>Allele</th>
+                                    <th>Nucleotide Effect</th>
+                                    <th>Predicted Enzyme Activity</th>
+                                </tr>
+                                <tr id="red">
+                                    <td>*2</td>
+                                    <td>c.681G>A   Splicing Defect</td>
+                                    <td>Loss of Function</td>
+                                </tr>
+                                <tr id="red">
+                                    <td>*3</td>
+                                    <td>c.636G>A   W212X</td>
+                                    <td>Loss of Function</td>
+                                </tr>
+                                <tr id="green">
+                                    <td>*17</td>
+                                    <td>c.806C>T   Increased transcription</td>
+                                    <td>Gain of Function</td>
+                                </tr>
+                            </table>
+
+<!-- INTERPRETATION -->
+                            
+							<h3>Interpretation Summmary</h3>
+                            <p> This genotype is predicted to function as a poor metabolizer which is associated with significantly reduced metabolic activation of and response to clopidogrel (Plavix). </p>
+</div>
+						<div id="recommendations">
+							<button id="patient_resource" onclick="reference_show(), setHeight()">Patient Resource</button>
+                            
+<!-- RECOMMENDATIONS -->
+                            
+							<h3>Recommendations</h3>
+                            
+                            
+                            <p>Based on Clinical Pharmacogenetic Implementation Consortium (CPIC) Guidelines, recommendations are to consider <b>USING ALTERNATIVE THERAPIES</b>; prasugrel 10mg daily OR ticagrelor 90mg BID.</p>
+							<p>Contact the Pharmacogenomic Counseling Service for additional information at 123-456-7890</p>
+                            <p><b><span style="color:#002D72; font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans 		Condensed', Helvetica, Arial, sans-serif;">
+                                Signed by:</span></b> Walt Disney, PhD, FACMG</p>
+                            <p><b><span style="color:#002D72; font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans 		Condensed', Helvetica, Arial, sans-serif;">Report date:</span></b>  June 2, 2015</p>
+						</div>
+					</div>
+					<div class="div2" style="overflow-x:auto;">
+                            
+<!-- RESULTS TABLE (Test Info tab) -->
+                            
+
+                            
+                            <table>
+                                <tr>
+                                    <th>Patient</th>
+                                    <td>Mouse, Mickey</td>
+                                    <th>Specimen Type:</th>
+                                    <td>Whole Blood</td>
+                                </tr>
+                                <tr>
+                                    <th>Patient DOB</th>
+                                    <td>06/15/1945</td>
+                                    <th>Collection Date:</th>
+                                    <td>04/22/2015</td>
+                                </tr>
+                                
+                                <tr>
+                                    <th>Ordering Provider</th>
+                                    <td>Dr. Seuss</td>
+                                    <th>Received Date:</th>
+                                    <td>04/22/2015</td>
+                                </tr>
+                                <tr>
+                                    <th>Institution:</th>
+                                    <td>Disney Medical Center</td>
+                                    <th>Lab Accession No.</th>
+                                    <td>600254</td>
+                                </tr>
+                            </table>
+                            <div id="results_info_div">
+
+                        
+<!-- VARIANTS TESTED (Test Info tab) -->
+                        
+                        <h3>Test Methods and Limitations</h3>
+                        
+                        <p><b><span style="color:#002D72; font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans 		Condensed', Helvetica, Arial, sans-serif;">Pharmacogenomic Sequencing Panel</span></b></p>
+                        <p>A sequencing panel of 84 genes known to be involved in drug metabolism was performed using the MiSeqDxTM technology (Illumina, San Diego, CA).  The panel was designed to identify DNA sequence variants relevant to drug therapy decisions and to cover all coding regions plus at least 10 bp upstream and downstream. Only pathogenic or likely pathogenic variants are reported; variants of unknown significance are not returned.</p>
+                        
+                        <p>Genes to be sequenced include <i>GN01, GN02, GN03, GN04, GN05, GN06, GN07, GN08, GN09, GN10, GN11, GN12, GN13, GN14, GN15, GN16, GN17, GN18, GN19, GN20, GN21, GN22, GN23, GN24, GN25, GN26, GN27, GN28, GN29, GN30, GN31, GN32, GN33, GN34, GN35, GN36, GN37, GN38, GN39, GN40, GN41, GN42, GN43, GN44, GN45, GN46, GN47, GN48, GN49, GN50, GN51, GN52, GN53, GN54, GN55, GN56, GN57, GN58, GN59, GN60, GN61, GN62, GN63, GN64, GN65, GN66, GN67, GN68, GN69, GN70, GN71, GN72, GN73, GN74, GN75, GN76, GN77, GN78, GN79, GN80, GN81, GN82, GN83,</i> and <i>GN84</i> that are known to be associated with drug metabolism.</p>
+                        
+                         <p><b><span style="color:#002D72; font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans 		Condensed', Helvetica, Arial, sans-serif;">Limitations</span></b></p>
+                         <p>This assay will not detect large deletions or duplications, variants in genes or regions not included on the panel or in areas of inadequate coverage, or low-level mosaicism,  Only varaints classified according to the ACMG criteria as pathogenic and likely pathogenic will be reported.  Sequencing technology is continually evolving, and the interpretation of genetic findings may change over time.</p>
+                        
+                        <p><b><span style="color:#002D72; font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans 		Condensed', Helvetica, Arial, sans-serif;">DISCLAIMER</span></b></p>
+                        <p>This test was developed and its performance characteristics determined by the University of Schrek Genomics Laboratory. It has not been cleared or approved by the FDA.  This laboratory is certified under the Clinical Laboratory Improvement Amendments of 1988 (CLIA-88) as qualified to perform high complexity clinical laboratory testing.  This test is for clinical purposes.  It should not be regarded as investigational or for research.</p>
+                       
+                       <p><b><span style="color:#002D72; font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans 		Condensed', Helvetica, Arial, sans-serif;">
+                           Testing Performed at: </span></b><br>
+                           University of Schrek Genomics Laboratory<br>
+                           12345 Fantasy Road<br>
+                           Orlando, FL 56789<br>
+                           123-234-3456</p>
+
+						
+                            </div>
+                    </div>
+                </div>
+                <input type="submit" name="selection" value="Return to inbox" onclick="window.location='inbox.html';"></><br>
+                    </div>
+            <div id="footer-row1">
+                <div id="footer-bg">
+                    <div id="footer" class="container_24">
+                        <div class="copyright">
+                            <p>&COPY;2016</p>
+                            <p>While the investigators in the study have made every effort to ensure that the information presented is consistent with current practices, all information presented was prepared for simulated conditions and may not reflect all aspects of standard medical care.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+  			<script src="https://cdn.rawgit.com/smart-on-fhir/client-js/v0.0.3/dist/fhir-client.js"></script>
+		  	<script src="/static/./js/get-data.js"></script>
+		</body>
+	</html>

@@ -1,0 +1,92 @@
+#inbox_table table{
+	width:95%;
+	margin-left:50px;
+}
+#inbox_table{
+	text-align:right;
+     margin-right:50px;
+}
+#create_table{
+	float:left;
+	margin-left:50px;
+}
+.create_input p{
+	display:inline;
+}
+th, td{
+	padding: 5px;
+	text-align:center;
+}
+th{
+	background-color:#aaaaaa;
+}
+table tr:nth-child(even){
+	background-color:#eeeeee;
+}
+table tr:nth-child(odd){
+	background-color:#ffffff;
+}
+#yellow{
+	color:#bbbb00;
+}
+#green{
+	color:green;
+}
+#search_form{
+	display:inline;
+}
+#add_record_button{
+	margin:0% 0% 0% 82%;
+}
+#inbox_search{
+	text-align:right;
+	margin-right:25px;
+}
+#main_buttons{
+	text-align:right;
+	margin:10px 25px 0px 0px;
+}
+#main_buttons button{
+	font-size:.80em;
+}
+#main_buttons input{
+	float:right;
+	font-size:1em;
+	margin:-18px 0px 0px 0px;
+}
+#button{
+	margin:10px 0px 0px 0px;
+	font-size:1em;
+	float:right;
+}
+/* tables */
+table.tablesorter thead tr .header {
+	background-image: url(bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+#first_column {
+	background-image: none;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(desc.gif);
+}
+
+#footer-row1{
+    margin-top: 0px;
+    padding: 1.2em 0;
+    background: #ffffff;
+    bottom: 0;
+    margin-right: 0px;
+    font-family: "Fjalla One", Verdana, Geneva, sans-serif;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    width: 100%;
+    clear: both; //because you have some float on the previous "row"
+}

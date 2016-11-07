@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<script type="text/javascript" src="jquery-latest.js"></script> 
+			<script type="text/javascript" src="jquery.tablesorter.js"></script> 
+			<title>GMA project</title>
+			<link rel='stylesheet' href='main.css'>
+			<link rel='stylesheet' href='inbox.css'>
+			<script type="text/javascript">
+			$(document).ready(function() 
+    		{ 
+     	   		$("#myTable").tablesorter();
+     	    }); 
+     	    </script>
+		</head>
+		<body>
+            <p>Cutting E, Banchero M, Beitelshees AL, Cimino JJ, Del Fiol G, Gurses AP, Hoffman MA, Jeng LJ, Kawamoto K, Kelemen M, Pincus HA, Shuldiner AR, Williams MS, Pollin TI, Overby CL. <b>User-centered design of multi-gene sequencing panel reports for clinicians.</b> Journal of Biomedical Informatics. 2016 Jul 14.</p>
+            
+			<div id='app_title'>
+				<h1>Genomic Medicine Assistant</h1>
+			</div>
+			<div id="main">	
+				<h3>Inbox</h3>
+				<div id="inbox_search">
+					<form action="" id="search_form" method="POST">
+  						Search:
+  						<input type="search" name="inbox_search">
+  						<input type="submit">
+					</form>
+				</div>
+                                                    
+				<div id="inbox_table">
+					<table id="myTable" class="tablesorter">
+						<thead>
+						<tr>
+							<th id="first_column"></th>
+							<th>Date</th>
+							<th>Order No.</th>
+							<th>Ordered by: </th>
+							<th>Status</th>
+							<th>Type of Report</th>
+						</tr>
+						</thead>
+						<!-- script that will get a record and populate this form-->
+						<tbody>
+	  					<tr>
+	  					<form action="" method="post" >
+						<td><input type="radio" name="selection" value="CYP2C19 Report" onclick="window.location='cyp2c19-report.html';"></></td>
+	    					<td>3/27/2015</td>
+	    					<td>1654897</td>
+	    					<td><span class="redacted">Dr. Seuss</span></td>
+	    					<td>Final</td>
+	    					<td>Pharmacogenomic Sequencing Panel Report (CYP2C19)</td>
+	  					</tr>
+						<td><input type="radio" name="selection" value="IF Report" onclick="window.location='IF-report.html';"></td>
+	    					<td>4/5/2016</td>
+	    					<td>9874587</td>
+	    					<td><span class="redacted">Dr. Seuss</span></td>
+	    					<td>Final</td>
+	    					<td>Pharmacogenomic Sequencing Panel Report (SCN5A)</td>
+	  					</tr>
+						<td><input type="radio" name="selection" value="HNF1A Report" onclick="window.location='HNF1A-report.html';"></></td>
+	    					<td>5/30/2016</td>
+	    					<td>9842357</td>
+	    					<td><span class="redacted">Dr. Seuss</span></td>
+	    					<td>Final</td>
+	    					<td>Monogenic Diabetes Sequencing Panel (HNF1A)</td>
+	  					</tr>
+		  				</tbody>
+					</table>
+					<input type="submit" name="act" value="Archive selected report" id="button">
+					<input type="submit" name="act" value="View selected report" id="button"><br>
+	  				</form>
+				</div>
+				<div id="main_buttons">
+					<form action="" method="post">
+						<input type="submit" value="Show Archived Reports" action="">
+					</form>
+					<form action="">
+						<input type="submit" value="Create New Report" action="">
+					</form>
+				</div>
+			</div>
+            <div id="footer-row1">
+                <div id="footer-bg">
+                    <div id="footer" class="container_24">
+                        <div class="copyright">
+                            <p>&COPY;2016</p>
+                            <p>While the investigators in the study have made every effort to ensure that the information presented is consistent with current practices, all information presented was prepared for simulated conditions and may not reflect all aspects of standard medical care.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</body>
+	</html>
